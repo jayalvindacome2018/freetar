@@ -1,0 +1,16 @@
+-=-=-=-=-=-=-=-=-
+
+Version 0.2 Beta Release
+
+Date: Tuesday July 11, 2006
+
+-=-=-=-=-=-=-=-=-
+
+- Recoded HUD to display much faster than before (had to sacrifice visuals a bit). Should alleviate the bug that was causing some users to crash on startup, as well as a bug that caused extreme slowness of the game when loaded
+- Added code for Skin Support (no UI for it yet)
+- Added ExceptionDialog to display debugging information in JDialog to users. It should be displayed on non-fatal uncaught exceptions, as well as any exceptions handled through the handleException() methods
+- Fixed a number of bugs related to HUD display
+
+-=-=-=-=-=-=-=-=-
+
+Version 0.1 Beta Release
