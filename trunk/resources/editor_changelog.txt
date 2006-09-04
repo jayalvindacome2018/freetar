@@ -1,0 +1,100 @@
+-=-=-=-=-=-=-=-=-
+
+Version 0.2 Beta Release
+
+Date: Tuesday July 11, 2006
+
+This update represents the combination of all updates present in the webstart version (available from
+http://freetar.antonstruyk.com/download.html ) rolled into the downloadable version. All changes below represent bugfixes and changes since the V0.1 Beta release.
+
+-=-=-=-=-=-=-=-=-
+
+- Added 'Green On Bottom' option to toggle ordering of tracks from Low-To-High to High-To-Low
+
+- Fixed a bug where the controller was not initialized until you went into the controller configuration and clicked 'OK' (with or without changes). Now the controller attempts to configure itself on launch.
+
+-Fixed a bug caused by the fix above - NullPointerException when loading the program without an existing controller.ini
+
+-Added WMA support
+
+-Note states no longer reset automatically when pausing/unpausing (was causing the 'note press times' to be lost of you paused and re-started the song)
+
+-Added 'BeatOffset' to the XML in saved files (doesn't do anything yet)
+
+-Added shotcut key to skip ahead/behind 0.5 seconds. (Page Up / Page Down)
+
+-Fixed bug where undoing a note-duration extension would increase rather than de-crease the note length
+
+-Now when the user tries to add a new note on top of an existing note, the existing note is removed instead (toggles)
+
+-Switched from PGUP/PGDN to Shift-RIGHT/Shift-LEFT for seeking ahead/behind in song
+
+-Fixed bug that prevented the user undoing a 'reduce note time' that never completed (becasue the note was already 0-length)
+
+-Re-coded a large portion of the way the editing commands work to prevent placement of notes on top of eachother. Now you should be unable to place notes overlapping eachother in all cases - placing new notes, shifting old notes, and changing tracks.
+
+-Fixed a bug where notes could be 'extended' over top of other notes on the same track
+
+-Fixed a bug where an un-optimized data class of a song was being loaded when creating new songs - should be a slight increase in performance for large songs that aren't loaded.
+
+-Added some extra Exception checking to prevent a few note-placement bugs
+
+- In 'Press Button To Record' mode, holding the button should increase the length of the new note. You have to hold the button for at least 1.5x the allowable error length (to prevent erroneous short-duration notes).
+
+-launching the program with the '-NoSystemLookAndFeel' command line argument will prevent the editor from loading the Windows look and feel (reverts to Java default).
+
+-Re-wrote pretty much the entire input codebase to allow better customizability of the controls. Now you should be able to map analog controls (+ or - in any axis) to an action, map a seperate buttons for Strum Up and Strum Down, and map to any direction in the HAT switch.
+
+-Semi-fixed a bug that was causing issues when moving large groups of notes. I'm not sure if everything is worked out in this area or not. If you have a LOT of notes (read: an entire song) selected, the move note commands may be a little slow. I'll work on improving performance when I can get around to it.
+
+-Now using the latest version of JInput (hopefully will fix some issues people are having). Still need to do a little re-working of the controllerPoller class to check the new EventQueue's that JInput provides to ensure I don't miss any button presses.
+
+-Updated native Linux library in the webstart version with (I think) all of the necessary native libraries. Everything should work under Linux now - I hope.
+
+-Fixed a bug that prevented a note that had been shifted left or right from being deleted without re-loading the song.
+
+-Surpressed an error that was causing people with the 'Sector 7' PS2->USB adapter to crash with a 'NullPointerException'. It appears that this is a hardware error - for now the error is surpressed - but the issue is still under investigation.
+
+-Fixed a bug where the 'Default Controller Not Found' error was popping up if there was any whitespace at the end of the controller name in the controller.ini file - Gamepad names are now trimmed before comparason.
+
+-Fixed a bug that was causing the 'Require Strum To Play Notes' option to be un-selected when loading from controller.ini file
+
+-Added 'Practice Strum Timing' mode - The song will register note pressed correctly as long as you strum at the right time for the note. This mode is intended to test out the timing of notes, without having to worry about getting the fingering correctly
+
+-Fixed a bug that allowed notes to be pasted past the end of a song (if they were part of a group).
+
+-Fixed a bug where notes were remaining in the 'selected' clipboard after a song was un-loaded.
+
+-Added visual feedback (magenta arrows) to each track that has selected notes that are not being drawn because they are off-screen. The arrows point in the direction of the selected notes.
+
+- Fixed order of playback modes so that the practice modes (strum and 'vanilla') are located beside eachoter. Also renamed 'Strum Practice Mode' to 'Practice Strum Timing Mode' to make it more obvious what its for
+
+- Added a box at the end of each 'Track' that lights up in the track's color if there is supposed to be a note being played at that time. The buttons ONLY light in one of the practice modes and only when the note is being triggered for the first time (use the 'Reset Note States' button to reset them).
+
+-Fixed a bug where notes weren't being drawn as 'selected' if they were moved ahead or behind.
+
+-Fixed a bug where resetting the song notes was not always clearing the new track timing panels when the note states were reset - causing the panel to remain highligted even when the note wasn't active anymore
+
+-Added Hammer-On support to Practice Mode
+
+-Added Pull-Off support to Practice Mode
+
+-Hammer-Ons and Pull-Offs are triggered if you press/release a note within 0.24 seconds of a successfully played note
+
+-Fixed the 'chord detection' in Practice mode to be more like the GH style. You can no longer play the song simply by holding down all the notes and struming (use the strum-timing mode for this). It should reflect pretty much exactly the GH style of play
+
+-Added 'HammerOnTime' tag to XML
+
+-Added 'PullOffTime' tag to XML
+
+-Added 'Difficulty' tag to XML
+
+-Added ability to set HammerOnTime, PullOffTime, and Difficulty through the song-properties dialog in the editor
+
+-Fixed bug where the difficulty descriptions didn't have scrollbars (if necessary) in the windows Look and Feel
+
+-Updated 'V0.1 Beta' to 'V0.2 Beta' in all editor menus (packing for downloadable)
+
+-Produced .exe to launch program (for those that want to use the downloadable version) in windows
+
+-Re-named and organized native library structure to allow sharing between the Freetar Editor and Freetar Hero programs 

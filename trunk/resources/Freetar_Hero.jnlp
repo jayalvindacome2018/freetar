@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jnlp PUBLIC "-//Sun Microsystems, Inc.//DTD JNLP 1.5//EN" "http://www.netbeans.org/jnlp/DTD/jnlp.dtd">
+<jnlp codebase="http://freetar.antonstruyk.com/webstart/" href="Freetar_Hero.jnlp">
+    <information>
+        <title>Freetar Hero - v0.1 Beta</title>
+        <vendor>www.AntonStruyk.com</vendor>
+        <homepage href="http://www.antonstruyk.com"/>
+        <description>Freetar Hero - A free PC rhythm based game. Beta version.</description>
+        <icon href="freetar_webstart_logo.jpg"/>
+		<offline-allowed />
+    </information>
+    <resources>
+        <j2se href="http://java.sun.com/products/autodl/j2se" version="1.5+"/>
+        <jar href="Freetar_Core.jar" main="true"/>
+	<jar href="lib/DefaultSkin.jar" />
+	<jar href="lib/GameResources.jar"/>
+        <jar href="lib/jInput.jar" />    
+        <jar href="lib/jme.jar" />
+        <jar href="lib/jme-awt.jar" />
+        <jar href="lib/jme-effects.jar" />
+        <jar href="lib/jme-font.jar" />
+	<jar href="lib/jme-gamestates.jar" />
+	<jar href="lib/jme-model.jar" />
+        <jar href="lib/jme-terrain.jar" />
+        <jar href="lib/lwjgl.jar" />
+        <jar href="lib/NativeFmodEx.jar" />        
+        <jar href="lib/swing-layout-1.0.jar" />
+    </resources>
+	
+    <resources os="Windows">
+        <nativelib href="nativelib/windows/fmodex4-03-03.jar" />
+        <nativelib href="nativelib/windows/jInput.jar" />
+        <nativelib href="nativelib/windows/NativeFmodEx1-2-7.jar" />
+        <nativelib href="nativelib/windows/jME-cvs.jar" />
+    </resources>
+	
+    <security>
+        <all-permissions/>
+    </security>
+    <application-desc main-class="net.freetar.game.Launcher"/>
+</jnlp>
