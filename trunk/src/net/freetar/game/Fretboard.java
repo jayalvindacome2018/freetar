@@ -78,18 +78,25 @@ public class Fretboard{
     private Map<Note, Node> noteToNodeMap;
     private float scrollSpeed;
     
+    private boolean isLefty;
+    
     private FingeringBoard fingeringBoard;
     
     /** Creates a new instance of Fretboard */
     public Fretboard(Song song){
-        this(song, 1.0f);
+        this(song, 1.0f,false);
     }
     
-    public Fretboard(Song song, float scrollSpeed) {
+    public Fretboard(Song song, float scrollSpeed){
+        this(song,1.0f,false);
+    }
+    
+    public Fretboard(Song song, float scrollSpeed, boolean lefty) {
         this.song = song;
         this.rootNode = new Node("FretboardRootNode");
         this.scrollingNode = new Node("BackgroundRootNode");
         this.scrollSpeed = scrollSpeed;
+        this.isLefty = lefty;
         
         noteToNodeMap = new HashMap<Note, Node>();
         
@@ -98,6 +105,10 @@ public class Fretboard{
         rootNode.attachChild(scrollingNode);
         rootNode.attachChild(fingeringBoard.getRootNode());
         rootNode.updateRenderState();
+        if(isLefty) {
+            rootNode.setLocalScale(new Vector3f(-1,1,1));
+            rootNode.setLocalTranslation(new Vector3f(1,0,0));
+        }
         
         setupTrackMaterials();
         setupBackground(BACKGROUND_NAME);
@@ -124,8 +135,16 @@ public class Fretboard{
         URL bgLocation = Skin.getInstance().getResource(textureFileName);
         //TODO do some error checking for the URL location (throw fileNotFoundException I guess)
         Texture bgTexture = TextureManager.loadTexture(bgLocation, Texture.MM_LINEAR, Texture.FM_LINEAR);
+        
         bgTexture.setWrap(Texture.WM_WRAP_S_WRAP_T);
+        
+        if(isLefty) {
+            bgTexture.setScale(new Vector3f(-1,1,1));
+        }
+        
+        
         ts.setTexture(bgTexture);
+    
         
         AlphaState as = renderer.createAlphaState();
         as.setEnabled(true);

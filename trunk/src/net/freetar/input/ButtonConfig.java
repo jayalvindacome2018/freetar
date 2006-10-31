@@ -50,11 +50,13 @@ public class ButtonConfig{
     
     private Gamepad gamepad;
     private Map<Action, Button> map;  //Mapping of the Action->its assigned button
+    private boolean lefty;
     
     public ButtonConfig(Gamepad gamepad) {
         this.gamepad = gamepad;
         this.strumRequired = true;
         map = new EnumMap<Action, Button>(Action.class);
+        lefty=false;
     }
     
     public void assign(Button button, Action action) {
@@ -156,5 +158,13 @@ public class ButtonConfig{
             return Action.TRACK_4;
         }
         return null;
+    }
+    
+    public void setLefty(boolean val) {
+        this.lefty = val;
+    }
+    
+    public boolean getLefty() {
+        return this.lefty;
     }
 }

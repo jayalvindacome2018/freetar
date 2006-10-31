@@ -36,11 +36,14 @@ public class GamepadManager {
 
     private static final GamepadManager manager = new GamepadManager();
     private List<Gamepad> gamepads;
+    private static int unidentified = 0;
     
     private GamepadManager() {
         //Builds a list of all the available gamepads on the system
         gamepads = new ArrayList<Gamepad>();
         Controller[] controllers = ControllerEnvironment.getDefaultEnvironment().getControllers();
+        
+        
         for(Controller c : controllers){
             try {
                 gamepads.add(new Gamepad(c));
@@ -65,5 +68,10 @@ public class GamepadManager {
     
     public static GamepadManager getGamepadManager(){
         return manager;
+    }
+    
+    public static String getNewName() {
+        unidentified++;
+        return "Generic Gamepad "+unidentified;
     }
 }

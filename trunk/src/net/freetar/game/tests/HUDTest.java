@@ -67,7 +67,7 @@ public class HUDTest extends SimpleGame{
         
         pressEffects = new PressEffectManager();
         rootNode.attachChild(pressEffects.getRootNode());
-        
+
         //Load the song before starting the new fretboard
         try {
             song = SongUtils.loadFromFile(new File("default.sng"));

@@ -197,6 +197,7 @@ public class GamepadConfigPanel extends javax.swing.JPanel {
 
         jLabel7.setText("Play Note 1");
 
+        jLabel8.setBackground(new java.awt.Color(51, 255, 51));
         jLabel8.setText("Play Note 0");
 
         jLabel9.setText("Strum Up");
@@ -205,14 +206,19 @@ public class GamepadConfigPanel extends javax.swing.JPanel {
 
         specialButtonComboBox.setEnabled(false);
 
+        note4ComboBox.setBackground(new java.awt.Color(255, 153, 51));
         note4ComboBox.setEnabled(false);
 
+        note3ComboBox.setBackground(new java.awt.Color(0, 51, 255));
         note3ComboBox.setEnabled(false);
 
+        note2ComboBox.setBackground(new java.awt.Color(255, 255, 51));
         note2ComboBox.setEnabled(false);
 
+        note1ComboBox.setBackground(new java.awt.Color(255, 0, 0));
         note1ComboBox.setEnabled(false);
 
+        note0ComboBox.setBackground(new java.awt.Color(0, 255, 0));
         note0ComboBox.setEnabled(false);
 
         strumUpComboBox.setEnabled(false);
@@ -329,7 +335,7 @@ public class GamepadConfigPanel extends javax.swing.JPanel {
                     .add(jLabel9)
                     .add(strumUpComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(setStrumUp))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 10, Short.MAX_VALUE)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel10)
                     .add(strumDownComboBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -351,7 +357,7 @@ public class GamepadConfigPanel extends javax.swing.JPanel {
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                         .add(jLabel1)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(controllerComboBox, 0, 299, Short.MAX_VALUE))
+                        .add(controllerComboBox, 0, 316, Short.MAX_VALUE))
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, requireStrumCheckBox)
                     .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())

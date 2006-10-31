@@ -26,8 +26,8 @@
               <Component id="logoLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="launchGameButton" pref="312" max="32767" attributes="1"/>
-                  <Component id="jTabbedPane1" alignment="1" pref="312" max="32767" attributes="1"/>
+                  <Component id="jTabbedPane1" pref="373" max="32767" attributes="1"/>
+                  <Component id="launchGameButton" alignment="1" pref="373" max="32767" attributes="1"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -40,7 +40,7 @@
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Component id="logoLabel" alignment="0" min="0" pref="0" max="32767" attributes="1"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jTabbedPane1" min="-2" pref="225" max="-2" attributes="1"/>
+                      <Component id="jTabbedPane1" min="-2" pref="258" max="-2" attributes="1"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="launchGameButton" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -89,11 +89,11 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="musicFileTextField" pref="196" max="32767" attributes="0"/>
-                                  <Component id="songNameTextField" alignment="0" pref="196" max="32767" attributes="0"/>
-                                  <Component id="songLengthTextField" alignment="0" pref="196" max="32767" attributes="0"/>
-                                  <Component id="numberOfNotesTextField" alignment="0" pref="196" max="32767" attributes="0"/>
-                                  <Component id="difficultyTextField" alignment="1" pref="196" max="32767" attributes="0"/>
+                                  <Component id="musicFileTextField" pref="188" max="32767" attributes="0"/>
+                                  <Component id="songNameTextField" alignment="0" pref="188" max="32767" attributes="0"/>
+                                  <Component id="songLengthTextField" alignment="0" pref="188" max="32767" attributes="0"/>
+                                  <Component id="numberOfNotesTextField" alignment="0" pref="188" max="32767" attributes="0"/>
+                                  <Component id="difficultyTextField" alignment="1" pref="188" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="changeSongButton" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -213,12 +213,12 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="skinPreviewLabel" alignment="0" pref="287" max="32767" attributes="0"/>
-                          <Component id="jLabel13" alignment="0" pref="287" max="32767" attributes="0"/>
+                          <Component id="skinPreviewLabel" alignment="0" pref="312" max="32767" attributes="0"/>
+                          <Component id="jLabel13" alignment="0" pref="312" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="skinComboBox" pref="260" max="32767" attributes="0"/>
+                              <Component id="skinComboBox" pref="276" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -230,7 +230,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="133" max="32767" attributes="0"/>
+                      <EmptySpace pref="137" max="32767" attributes="0"/>
                       <Component id="skinPreviewLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -474,7 +474,7 @@
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="controllerTextField" pref="141" max="32767" attributes="0"/>
+                          <Component id="controllerTextField" pref="172" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="configureControllerButton" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -524,7 +524,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                          <Component id="LeftyCheckBox" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -532,14 +532,14 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="84" max="32767" attributes="0"/>
+                          <Component id="LeftyCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="97" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+                <Component class="javax.swing.JCheckBox" name="LeftyCheckBox">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Lefty Flip"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -547,7 +547,6 @@
                         <EmptyBorder bottom="0" left="0" right="0" top="0"/>
                       </Border>
                     </Property>
-                    <Property name="enabled" type="boolean" value="false"/>
                     <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
                       <Insets value="[0, 0, 0, 0]"/>
                     </Property>
