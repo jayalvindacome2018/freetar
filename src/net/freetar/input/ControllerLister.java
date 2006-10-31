@@ -34,6 +34,7 @@ public class ControllerLister {
         ControllerEnvironment ce = ControllerEnvironment.getDefaultEnvironment();
         Controller[] controllers = ce.getControllers();
         for(Controller controller : controllers){
+            if(controller.getName()==null)
             printController (controller);
         }
     }

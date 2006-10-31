@@ -18,7 +18,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="controllerComboBox" pref="299" max="32767" attributes="0"/>
+                      <Component id="controllerComboBox" pref="316" max="32767" attributes="0"/>
                   </Group>
                   <Component id="requireStrumCheckBox" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
@@ -161,7 +161,7 @@
                       <Component id="strumUpComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="setStrumUp" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="10" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="strumDownComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -204,6 +204,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="ff" red="33" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Play Note 0"/>
           </Properties>
         </Component>
@@ -230,6 +233,9 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="note4ComboBox">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="99" red="ff" type="rgb"/>
+            </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
             </Property>
@@ -238,6 +244,9 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="note3ComboBox">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="33" red="0" type="rgb"/>
+            </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
             </Property>
@@ -246,6 +255,9 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="note2ComboBox">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
             </Property>
@@ -254,6 +266,9 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="note1ComboBox">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="ff" type="rgb"/>
+            </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
             </Property>
@@ -262,6 +277,9 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="note0ComboBox">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="ff" red="0" type="rgb"/>
+            </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
             </Property>

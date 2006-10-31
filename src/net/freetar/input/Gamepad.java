@@ -38,9 +38,11 @@ public class Gamepad {
 
     private Controller controller;
     private Button[] buttons;
+    private String name;
     
     public Gamepad(Controller controller)
     throws ControllerNotSupportedException {
+        
         initForController(controller);
     }
     
@@ -50,6 +52,12 @@ public class Gamepad {
             throw new ControllerNotSupportedException(controller, "NULL Controller");
         }
         this.controller = controller;
+        
+        if(controller.getName()==null){
+            setName(GamepadManager.getGamepadManager().getNewName());
+        }
+        else
+            setName(controller.getName());
         
         //Get someplace to store the buttons
         List<Button> supportedButtons = new ArrayList<Button>();
@@ -63,7 +71,7 @@ public class Gamepad {
                 supportedButtons.add(newButton);
             }else if(currentComponent.getIdentifier() instanceof Component.Identifier.Key){
                 Button newButton = new KeyButton(currentComponent);
-                logger.info("Component " + currentComponent + " is a KEY. Adding new button - " + newButton + " - to " + this);
+     //           logger.info("Component " + currentComponent + " is a KEY. Adding new button - " + newButton + " - to " + this);
                 supportedButtons.add(newButton);
             }else if(currentComponent.getIdentifier() instanceof Component.Identifier.Axis){
                 logger.info("Component " + currentComponent + " is an axis.");
@@ -104,7 +112,11 @@ public class Gamepad {
     }
     
     public String getName(){
-        return controller.getName();
+        return this.name;
+    }
+    
+    public void setName(String n) {
+            this.name = n;
     }
     
     public void poll(){
@@ -118,4 +130,6 @@ public class Gamepad {
     public String toString(){
         return getName();
     }
+    
+    
 }

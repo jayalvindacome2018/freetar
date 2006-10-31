@@ -136,7 +136,7 @@ public class FreetarSimpleGame extends SimpleGame
         
         logger.info("Creating The Fretboard");
         //Create the Fretboard
-        fretboard = new Fretboard(song, 2.0f);
+        fretboard = new Fretboard(song, 2.0f, buttonConfig.getLefty());
         
         logger.info("Adding All Notes to Fretboard");
         for(Note n : song.getAllNotes()){

@@ -74,11 +74,21 @@ public class Launcher extends javax.swing.JFrame {
     private PropertiesIO graphicsSettings;
     private ExceptionDisplayDialog exceptionDisplayDialog;
     
+    private boolean mac = false;
+    
     /** Creates new form Launchwer */
     public Launcher() {
+        mac = (System.getProperty("os.name").equals("Mac OS X"));
+        
         exceptionDisplayDialog = new ExceptionDisplayDialog();
         
         initComponents();
+        
+        int defaultFrequency; 
+        if(mac)
+            defaultFrequency = 0;
+        else
+            defaultFrequency = PropertiesIO.DEFAULT_FREQ;
         
         //Load the graphics settings
         graphicsSettings = new PropertiesIO("properties.cfg");
@@ -266,7 +276,7 @@ public class Launcher extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         configureControllerButton = new javax.swing.JButton();
         gameOptionPanel = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        LeftyCheckBox = new javax.swing.JCheckBox();
         logoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -323,11 +333,11 @@ public class Launcher extends javax.swing.JFrame {
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabel5))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(songPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(musicFileTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                            .add(songNameTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                            .add(songLengthTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                            .add(numberOfNotesTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, difficultyTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)))
+                            .add(musicFileTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                            .add(songNameTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                            .add(songLengthTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                            .add(numberOfNotesTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, difficultyTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)))
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, changeSongButton))
                 .addContainerGap())
         );
@@ -384,12 +394,12 @@ public class Launcher extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, cusomizePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(cusomizePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, skinPreviewLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel13, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, skinPreviewLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel13, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.LEADING, cusomizePanelLayout.createSequentialGroup()
                         .add(jLabel12)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(skinComboBox, 0, 260, Short.MAX_VALUE)))
+                        .add(skinComboBox, 0, 276, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         cusomizePanelLayout.setVerticalGroup(
@@ -397,7 +407,7 @@ public class Launcher extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, cusomizePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(jLabel13)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 133, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 137, Short.MAX_VALUE)
                 .add(skinPreviewLabel)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(cusomizePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
@@ -505,7 +515,7 @@ public class Launcher extends javax.swing.JFrame {
                 .addContainerGap()
                 .add(jLabel6)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(controllerTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                .add(controllerTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(configureControllerButton))
         );
@@ -518,24 +528,23 @@ public class Launcher extends javax.swing.JFrame {
         );
 
         gameOptionPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Game Options"));
-        jCheckBox1.setText("Lefty Flip");
-        jCheckBox1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
-        jCheckBox1.setEnabled(false);
-        jCheckBox1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        LeftyCheckBox.setText("Lefty Flip");
+        LeftyCheckBox.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        LeftyCheckBox.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
         org.jdesktop.layout.GroupLayout gameOptionPanelLayout = new org.jdesktop.layout.GroupLayout(gameOptionPanel);
         gameOptionPanel.setLayout(gameOptionPanelLayout);
         gameOptionPanelLayout.setHorizontalGroup(
             gameOptionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(gameOptionPanelLayout.createSequentialGroup()
-                .add(jCheckBox1)
+                .add(LeftyCheckBox)
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         gameOptionPanelLayout.setVerticalGroup(
             gameOptionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(gameOptionPanelLayout.createSequentialGroup()
-                .add(jCheckBox1)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .add(LeftyCheckBox)
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout optionsPanelLayout = new org.jdesktop.layout.GroupLayout(optionsPanel);
@@ -576,8 +585,8 @@ public class Launcher extends javax.swing.JFrame {
                 .add(logoLabel)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(launchGameButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
-                    .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE))
+                    .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
+                    .add(launchGameButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -587,7 +596,7 @@ public class Launcher extends javax.swing.JFrame {
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
                     .add(org.jdesktop.layout.GroupLayout.LEADING, logoLabel, 0, 0, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.LEADING, layout.createSequentialGroup()
-                        .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 225, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 258, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(launchGameButton)))
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -650,7 +659,14 @@ public class Launcher extends javax.swing.JFrame {
         File songFile = null;
         File musicFile = null;
         
-        JFileChooser fileChooser = new JFileChooser(new File("."));
+        String dir = ".";
+        if(mac)
+        {
+            dir = System.getProperty("user.home");
+        }
+            
+        
+        JFileChooser fileChooser = new JFileChooser(new File(dir));
         fileChooser.setDialogTitle("Select a SNG file");
         fileChooser.setFileFilter(FileUtils.createFileFilter("sng", "Song Files"));
         if(fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION){
@@ -737,6 +753,7 @@ public class Launcher extends javax.swing.JFrame {
         //BaseGame app = new FreetarGame2(music, song, buttonConfig);
         this.dispose();
         try {
+            buttonConfig.setLefty(LeftyCheckBox.isSelected());
             FreetarGame.run(song, music, buttonConfig);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -759,12 +776,14 @@ public class Launcher extends javax.swing.JFrame {
     
     private void center(){
         int x, y;
+        this.jTabbedPane1.setMinimumSize(new java.awt.Dimension(this.jTabbedPane1.getWidth(),this.jTabbedPane1.getHeight()+200));
         x = (Toolkit.getDefaultToolkit().getScreenSize().width - this.getWidth()) / 2;
         y = (Toolkit.getDefaultToolkit().getScreenSize().height - this.getHeight()) / 2;
         this.setLocation(x, y);
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox LeftyCheckBox;
     private javax.swing.JButton changeSongButton;
     private javax.swing.JComboBox colorDepthComboBox;
     private javax.swing.JButton configureControllerButton;
@@ -776,7 +795,6 @@ public class Launcher extends javax.swing.JFrame {
     private javax.swing.JCheckBox fullScreenCheckBox;
     private javax.swing.JPanel gameOptionPanel;
     private javax.swing.JPanel graphicsOptionsPanel;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
