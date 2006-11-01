@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Freetar_Core_Ant_Tasks" default="default" basedir=".">
+    <description>Builds, tests, and runs the project Freetar Core.</description>
+    <target name="jar-defaultSkin">
+        <delete file="${basedir}/resources/DefaultSkin.jar" />
+        <jar destfile="${basedir}/resources/DefaultSkin.jar">
+            <fileset dir="${basedir}/resources/DefaultSkin" />
+        </jar>
+    </target>
+    
+    <target name="jar-editorIcons">
+        <delete file="${basedir}/resources/EditorIcons.jar" />
+        <jar destfile="${basedir}/resources/EditorIcons.jar">
+            <fileset dir="${basedir}/resources/EditorIcons" />
+        </jar>
+    </target>
+    
+    <target name="jar-gameResources">
+        <delete file="${basedir}/resources/GameResources.jar" />
+        <jar destfile="${basedir}/resources/GameResources.jar">
+            <fileset dir="${basedir}/resources/GameResources" />
+        </jar>
+    </target>
+    
+    <target name="build-keystore">
+        <genkey alias="AntonStruyk" storepass="astruyk" keystore="${basedir}/AntonStruyk.keys">
+            <dname>
+                <param name="CN" value="Anton Struyk" />
+                <param name="OU" value="Freetar Editor" />
+                <param name="O" value="AntonStruyk.com" />
+                <param name="C" value="CA" />
+            </dname>
+        </genkey>
+    </target>
+    
+    <target name="build-webstart" depends="jar-defaultSkin, jar-editorIcons, jar-gameResources">
+        <copy todir="${dist.dir}/nativelib/">
+            <fileset dir="${basedir}/nativelib/" />
+        </copy>
+        
+        <signjar alias="AntonStruyk" storepass="astruyk" keystore="${basedir}/AntonStruyk.keys">
+            <fileset file="${dist.jar}" />
+            <fileset dir="${dist.dir}/lib">
+                <include name="**/*.jar" />
+            </fileset>
+            <fileset dir="${dist.dir}/nativelib/linux">
+                <include name="**/*.jar" />
+            </fileset>
+            <fileset dir="${dist.dir}/nativelib/windows">
+                <include name="**/*.jar" />
+            </fileset>
+            <fileset dir="${dist.dir}/nativelib/mac">
+                <include name="**/*.jar" />
+            </fileset>
+        </signjar>
+        
+        <delete file="${dist.dir}/README.TXT" />
+        
+        <copy todir="${dist.dir}">
+            <fileset dir="${basedir}/resources">
+                <include name="**/*.jnlp" />
+            </fileset>
+        </copy>
+        
+        <copy file="${basedir}/resources/freetar_webstart_logo.jpg" todir="${dist.dir}" />
+    </target>
+    
+    <target name="pack-for-windows-distribution">
+        <!-- Copy the library .dll files into the lib folder -->
+        <unjar dest="${dist.dir}/lib/">
+            <patternset>
+                <include name="**/*.*" />
+            </patternset>
+            <fileset dir="${basedir}/native/windows">
+                <include name="**/*.jar" />
+            </fileset>
+        </unjar>
+        
+        <delete file="${dist.dir}/README.TXT" />
+        <copy file="${basedir}/resources/changelog.txt" todir="${dist.dir}" />
+    </target>
+    
+</project>
