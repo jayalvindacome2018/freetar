@@ -33,11 +33,11 @@
         <nativelib href="nativelib/windows/NativeFmodEx.jar" />
         <nativelib href="nativelib/windows/jME.jar" />
     </resources>
-	<resources os="Mac OS">
-        <nativelib href="nativelib/windows/fmodex.jar" />
-        <nativelib href="nativelib/windows/jInput.jar" />
-        <nativelib href="nativelib/windows/NativeFmodEx.jar" />
-        <nativelib href="nativelib/windows/jME.jar" />
+	<resources os="Mac OS X">
+        <nativelib href="nativelib/mac/fmodex.jar" />
+        <nativelib href="nativelib/mac/jInput.jar" />
+        <nativelib href="nativelib/mac/NativeFmodEx.jar" />
+        <nativelib href="nativelib/mac/jME.jar" />
     </resources>
     <security>
         <all-permissions/>
