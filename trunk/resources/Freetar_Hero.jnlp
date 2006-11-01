@@ -28,12 +28,17 @@
     </resources>
 	
     <resources os="Windows">
-        <nativelib href="nativelib/windows/fmodex4-03-03.jar" />
+        <nativelib href="nativelib/windows/fmodex.jar" />
         <nativelib href="nativelib/windows/jInput.jar" />
-        <nativelib href="nativelib/windows/NativeFmodEx1-2-7.jar" />
-        <nativelib href="nativelib/windows/jME-cvs.jar" />
+        <nativelib href="nativelib/windows/NativeFmodEx.jar" />
+        <nativelib href="nativelib/windows/jME.jar" />
     </resources>
-	
+	<resources os="Mac">
+        <nativelib href="nativelib/windows/fmodex.jar" />
+        <nativelib href="nativelib/windows/jInput.jar" />
+        <nativelib href="nativelib/windows/NativeFmodEx.jar" />
+        <nativelib href="nativelib/windows/jME.jar" />
+    </resources>
     <security>
         <all-permissions/>
     </security>
