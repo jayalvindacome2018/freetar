@@ -23,7 +23,7 @@
     <nativelib href="nativelib/windows/jInput.jar" />
     <nativelib href="nativelib/windows/NativeFmodEx.jar" />
   </resources>
-  <resources os="Mac">
+  <resources os="Mac OS">
 	<nativelib href="nativelib/mac/fmodex.jar" />
     <nativelib href="nativelib/mac/jInput.jar" />
     <nativelib href="nativelib/mac/NativeFmodEx.jar" />
