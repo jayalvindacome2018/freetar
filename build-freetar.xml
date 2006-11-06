@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Freetar_Core_Ant_Tasks" default="default" basedir=".">
     <property name="dist.dir" value="dist" />
-    <property name="dist.jar" value="${dist.dir}/Freetar_Core.jar" />
+    <property name="dist.jar" value="${dist.dir}/Freetar_Hero.jar" />
     
     <description>Builds, tests, and runs the project Freetar Core.</description>
     <target name="jar-defaultSkin">
