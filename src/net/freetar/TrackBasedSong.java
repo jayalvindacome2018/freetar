@@ -38,14 +38,21 @@ import java.util.Set;
 import java.util.logging.Logger;
 
 /**
- *
- * @author Anton
+ * Concrete implementation of the Song class that uses a set of Track's to hold
+ * the Note's.
+ * @author Antonie Struyk
  */
 public class TrackBasedSong extends AbstractSong {
     private static final Logger logger = DebugHandler.getLogger("TrackBasedSong");
     
+    /**
+     * Array of tracks to hold the notes
+     */
     protected final Track[] tracks = new Track[Song.TRACKS];
     
+    /**
+     * Public constructor. Creates an empty song.
+     */
     public TrackBasedSong(){
         super();
         for(int i = 0; i < Song.TRACKS; i++){
