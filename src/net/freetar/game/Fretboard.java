@@ -20,6 +20,13 @@
 
 package net.freetar.game;
 
+import com.jme.util.geom.BufferUtils;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import net.freetar.Note;
 import net.freetar.Song;
 import com.jme.bounding.BoundingBox;
@@ -51,6 +58,7 @@ import java.nio.FloatBuffer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import net.freetar.util.DebugHandler;
 
 /**
  *
@@ -58,6 +66,7 @@ import java.util.Set;
  */
 public class Fretboard{
     private static final String BACKGROUND_NAME = "backgroundTexture.png";
+    private static final Logger logger = DebugHandler.getLogger("net.freetar.game.Fretboard");
     public static final float TRACK_WIDTH = 0.2f;
     
     public static final ColorRGBA[] trackColors = {
@@ -133,8 +142,38 @@ public class Fretboard{
         //Load the texture for the background
         TextureState ts = renderer.createTextureState();
         URL bgLocation = Skin.getInstance().getResource(textureFileName);
-        //TODO do some error checking for the URL location (throw fileNotFoundException I guess)
-        Texture bgTexture = TextureManager.loadTexture(bgLocation, Texture.MM_LINEAR, Texture.FM_LINEAR);
+        BufferedImage textureImage = null;
+        try {
+            textureImage = ImageIO.read(bgLocation);
+        } catch (IOException ex) {
+            DebugHandler.getInstance().logException(logger, ex);
+            //TODO do something else here? Exit or something?
+        }
+        //TODO check for null textureImage
+        
+        //Calculate some values
+        final float imgHeight = (float) textureImage.getHeight();               //The height of the background image
+        final float imgWidth = (float) textureImage.getWidth();                 //The width of the background image
+        final float texSize = (imgHeight > imgWidth) ? FastMath.nearestPowerOfTwo((int) imgHeight) : FastMath.nearestPowerOfTwo((int) imgWidth);    //The smallest power-of-two texture that can contain the background
+        final float texWidth = imgWidth / texSize;                              //The width (in OpenGL coords) of the image
+        final float texHeight = imgHeight / texSize;                            //The height (in OpenGL coords) of the image
+        
+        //Create an Image large enough to store the loaded texture as a power-of-two
+        BufferedImage resizedTexture = new BufferedImage((int) texSize, (int) texSize, BufferedImage.TYPE_INT_ARGB);
+        
+        //Draw the textureImage onto the resizedTexture
+        Graphics2D g = (Graphics2D)resizedTexture.getGraphics();
+
+        g.drawImage(textureImage, 0, 0, null);
+        Texture bgTexture = TextureManager.loadTexture(resizedTexture, Texture.MM_LINEAR, Texture.FM_LINEAR, false);
+
+        //Set the texture coordinates so the fretboard will have only the data from textureImage
+        //the area between (0,0) & (texWidth, texHeight)
+        FloatBuffer texCoords = BufferUtils.createVector2Buffer(4);
+        texCoords.put(0).put(0);
+        texCoords.put(0).put(texHeight);
+        texCoords.put(texWidth).put(texHeight);
+        texCoords.put(texWidth).put(0);
         
         bgTexture.setWrap(Texture.WM_WRAP_S_WRAP_T);
         
@@ -161,9 +200,7 @@ public class Fretboard{
         //Create the quad for the background
         final float totalLength = song.getProperties().getLength() * scrollSpeed;
         final float totalWidth = Song.TRACKS * TRACK_WIDTH;
-        final float texHeight = (float) bgTexture.getImage().getHeight();
-        final float texWidth = (float) bgTexture.getImage().getWidth();
-        final float QUAD_HEIGHT = texHeight * totalWidth / texWidth;
+        final float QUAD_HEIGHT = imgHeight * totalWidth / imgWidth;
         int requiredToSpanSong = (int) (totalLength / QUAD_HEIGHT) + 1; //+1 to fix for dropping decimals
         for(int i = 0;i < requiredToSpanSong; i++){
             Quad backgroundQuad = new Quad("BackgroundQuad", totalWidth, QUAD_HEIGHT);
@@ -171,6 +208,10 @@ public class Fretboard{
                     totalWidth / 2,
                     i * QUAD_HEIGHT + QUAD_HEIGHT / 2,
                     0));
+            
+            //Assign our calculate texture coords
+            backgroundQuad.setTextureBuffer(0, texCoords);
+            
             backgroundQuad.setModelBound(new BoundingBox());
             backgroundQuad.updateModelBound();
             backgroundQuad.setRenderState(ts);
