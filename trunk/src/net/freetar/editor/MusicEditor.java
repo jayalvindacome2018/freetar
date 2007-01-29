@@ -1155,7 +1155,7 @@ public class MusicEditor extends javax.swing.JFrame
                     .add(songPropertiesCancelButton))
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        aboutDialog.setTitle("Freetar Hero Editor - V0.2 Beta");
+        aboutDialog.setTitle("Freetar Editor - V0.2 Beta");
         aboutDialog.setAlwaysOnTop(true);
         aboutDialog.setModal(true);
         closeAboutDialogButton.setText("OK");
@@ -1177,7 +1177,7 @@ public class MusicEditor extends javax.swing.JFrame
         jLabel16.setText("www.AntonStruyk.com");
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("Freetar Hero Editor - V0.2 Beta");
+        jLabel14.setText("Freetar Editor - V0.2 Beta");
 
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("Web: http://freetar.antonstruyk.com");
@@ -1243,7 +1243,7 @@ public class MusicEditor extends javax.swing.JFrame
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Music Editor v0.2 BETA");
+        setTitle("Freetar Editor v0.2 BETA");
         setLocationByPlatform(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {

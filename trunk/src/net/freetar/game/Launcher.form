@@ -89,11 +89,11 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="musicFileTextField" pref="188" max="32767" attributes="0"/>
-                                  <Component id="songNameTextField" alignment="0" pref="188" max="32767" attributes="0"/>
-                                  <Component id="songLengthTextField" alignment="0" pref="188" max="32767" attributes="0"/>
-                                  <Component id="numberOfNotesTextField" alignment="0" pref="188" max="32767" attributes="0"/>
-                                  <Component id="difficultyTextField" alignment="1" pref="188" max="32767" attributes="0"/>
+                                  <Component id="musicFileTextField" pref="257" max="32767" attributes="0"/>
+                                  <Component id="songNameTextField" alignment="0" pref="257" max="32767" attributes="0"/>
+                                  <Component id="songLengthTextField" alignment="0" pref="257" max="32767" attributes="0"/>
+                                  <Component id="numberOfNotesTextField" alignment="0" pref="257" max="32767" attributes="0"/>
+                                  <Component id="difficultyTextField" alignment="1" pref="257" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="changeSongButton" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -213,12 +213,12 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="skinPreviewLabel" alignment="0" pref="312" max="32767" attributes="0"/>
-                          <Component id="jLabel13" alignment="0" pref="312" max="32767" attributes="0"/>
+                          <Component id="skinPreviewLabel" alignment="0" pref="348" max="32767" attributes="0"/>
+                          <Component id="jLabel13" alignment="0" pref="348" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="skinComboBox" pref="276" max="32767" attributes="0"/>
+                              <Component id="skinComboBox" pref="321" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -230,7 +230,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="137" max="32767" attributes="0"/>
+                      <EmptySpace pref="166" max="32767" attributes="0"/>
                       <Component id="skinPreviewLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -302,7 +302,7 @@
                               <Component id="gameOptionPanel" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="38" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -313,7 +313,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="gameOptionPanel" max="32767" attributes="1"/>
-                          <Component id="graphicsOptionsPanel" alignment="0" max="32767" attributes="1"/>
+                          <Component id="graphicsOptionsPanel" alignment="0" pref="160" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -533,7 +533,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="LeftyCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="97" max="32767" attributes="0"/>
+                          <EmptySpace pref="115" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>

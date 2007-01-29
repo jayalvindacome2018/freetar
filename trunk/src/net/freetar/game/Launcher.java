@@ -333,11 +333,11 @@ public class Launcher extends javax.swing.JFrame {
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabel5))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(songPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(musicFileTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                            .add(songNameTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                            .add(songLengthTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                            .add(numberOfNotesTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, difficultyTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)))
+                            .add(musicFileTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                            .add(songNameTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                            .add(songLengthTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                            .add(numberOfNotesTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, difficultyTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)))
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, changeSongButton))
                 .addContainerGap())
         );
@@ -394,12 +394,12 @@ public class Launcher extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, cusomizePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(cusomizePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, skinPreviewLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel13, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, skinPreviewLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel13, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.LEADING, cusomizePanelLayout.createSequentialGroup()
                         .add(jLabel12)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(skinComboBox, 0, 276, Short.MAX_VALUE)))
+                        .add(skinComboBox, 0, 321, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         cusomizePanelLayout.setVerticalGroup(
@@ -407,7 +407,7 @@ public class Launcher extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, cusomizePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(jLabel13)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 137, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 166, Short.MAX_VALUE)
                 .add(skinPreviewLabel)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(cusomizePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
@@ -544,7 +544,7 @@ public class Launcher extends javax.swing.JFrame {
             gameOptionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(gameOptionPanelLayout.createSequentialGroup()
                 .add(LeftyCheckBox)
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout optionsPanelLayout = new org.jdesktop.layout.GroupLayout(optionsPanel);
@@ -559,7 +559,7 @@ public class Launcher extends javax.swing.JFrame {
                         .add(graphicsOptionsPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(gameOptionPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         optionsPanelLayout.setVerticalGroup(
             optionsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -568,7 +568,7 @@ public class Launcher extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(optionsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(gameOptionPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(graphicsOptionsPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .add(graphicsOptionsPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jTabbedPane1.addTab("Options", optionsPanel);
