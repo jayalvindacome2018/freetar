@@ -699,7 +699,6 @@ public class MusicEditor extends javax.swing.JFrame
         aboutDialog = new javax.swing.JDialog();
         closeAboutDialogButton = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -1169,18 +1168,14 @@ public class MusicEditor extends javax.swing.JFrame
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/freetarLogo.png")));
         jLabel13.setToolTipText("Freetar Hero - Play It Your Way...");
 
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/antonLogo.png")));
-        jLabel15.setToolTipText("www.antonstruyk.com");
-
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("www.AntonStruyk.com");
+        jLabel16.setText("Copyright \u00a9 2007 EaglEye Computer Services");
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Freetar Editor - V0.2 Beta");
 
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("Web: http://freetar.antonstruyk.com");
+        jLabel17.setText("Web: http://www.freetar.net");
 
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Programmed By - Anton Struyk");
@@ -1192,32 +1187,29 @@ public class MusicEditor extends javax.swing.JFrame
         aboutDialog.getContentPane().setLayout(aboutDialogLayout);
         aboutDialogLayout.setHorizontalGroup(
             aboutDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, aboutDialogLayout.createSequentialGroup()
-                .add(aboutDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+            .add(aboutDialogLayout.createSequentialGroup()
+                .add(aboutDialogLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(aboutDialogLayout.createSequentialGroup()
                         .addContainerGap()
-                        .add(closeAboutDialogButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
+                        .add(jLabel13))
+                    .add(aboutDialogLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(jLabel14, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
+                    .add(aboutDialogLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(jLabel17, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
+                    .add(aboutDialogLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(jLabel18, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
+                    .add(aboutDialogLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(jLabel19, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
                     .add(aboutDialogLayout.createSequentialGroup()
                         .addContainerGap()
                         .add(jLabel16, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, aboutDialogLayout.createSequentialGroup()
+                    .add(aboutDialogLayout.createSequentialGroup()
                         .addContainerGap()
-                        .add(jLabel13))
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, aboutDialogLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(jLabel14, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, aboutDialogLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(jLabel17, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, aboutDialogLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(jLabel18, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, aboutDialogLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(jLabel19, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, aboutDialogLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(jLabel15, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)))
+                        .add(closeAboutDialogButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         aboutDialogLayout.setVerticalGroup(
@@ -1233,8 +1225,6 @@ public class MusicEditor extends javax.swing.JFrame
                 .add(jLabel18)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jLabel19)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabel15)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jLabel16)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -1325,7 +1315,7 @@ public class MusicEditor extends javax.swing.JFrame
             noteDisplayPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, noteDisplayPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(songDisplayPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 620, Short.MAX_VALUE)
+                .add(songDisplayPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(activeTracksPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
@@ -1360,7 +1350,7 @@ public class MusicEditor extends javax.swing.JFrame
         musicControlPanelLayout.setHorizontalGroup(
             musicControlPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, musicControlPanelLayout.createSequentialGroup()
-                .add(seekSlider, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
+                .add(seekSlider, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
                 .add(16, 16, 16)
                 .add(playButton)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -2784,7 +2774,7 @@ public class MusicEditor extends javax.swing.JFrame
                             songDisplayPanel.setStrumPressed(false);
                             break;
                         default:
-                            //logger.warning("Unhandled button release for " + pressedButton);
+                            logger.warning("Unhandled button release for " + pressedButton);
                             break;
                     }
                 }
@@ -3074,7 +3064,6 @@ public class MusicEditor extends javax.swing.JFrame
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
