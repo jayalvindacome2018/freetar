@@ -280,7 +280,7 @@ public class Launcher extends javax.swing.JFrame {
         logoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Freetar Hero - Beta Version 0.1");
+        setTitle("Freetar - Beta Version 0.1");
         setResizable(false);
         launchGameButton.setText("Launch Game");
         launchGameButton.setEnabled(false);
