@@ -162,14 +162,14 @@ public class FreetarSimpleGame extends SimpleGame
         
         //Add a light
         DirectionalLight dl = new DirectionalLight();
-        dl.setDirection(new Vector3f(0,-1,1));
-        dl.setAmbient(new ColorRGBA(0.8f,0.8f,0.8f,1));
+        dl.setDirection(new Vector3f(0,-0.5f,1));
+        dl.setAmbient(new ColorRGBA(0.9f,0.9f,0.9f,1));
         dl.setEnabled(true);
         lightState.attach(dl);
         
         logger.info("Positioning Camera");
-        cam.setLocation(new Vector3f(TRACK_WIDTH * (float) Song.TRACKS / 2.0f, -0.8f, 1.0f));
-        cam.lookAt(new Vector3f(TRACK_WIDTH * (float) Song.TRACKS / 2.0f, 0.8f, 0), new Vector3f(0,1,0));
+        cam.setLocation(new Vector3f(TRACK_WIDTH * (float) Song.TRACKS / 2.0f, -0.2f, 2f));
+        cam.lookAt(new Vector3f(TRACK_WIDTH * (float) Song.TRACKS / 2.0f, 0.7f, 0), new Vector3f(0,1,0));
         cam.setFrustumFar(VISUAL_DISTANCE);
         cam.update();
         
