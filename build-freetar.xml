@@ -25,15 +25,24 @@
         </jar>
     </target>
     
+    <target name="build-keystore">
+        <genkey alias="AntonStruyk" storepass="astruyk" keystore="${basedir}/AntonStruyk.keys">
+            <dname>
+                <param name="CN" value="Anton Struyk" />
+                <param name="OU" value="Freetar Editor" />
+                <param name="O" value="AntonStruyk.com" />
+                <param name="C" value="CA" />
+            </dname>
+        </genkey>
+    </target>
+    
     <target name="build-webstart" depends="jar-defaultSkin, jar-editorIcons, jar-gameResources">
         <copy todir="${dist.dir}/nativelib/">
             <fileset dir="${basedir}/nativelib/" />
         </copy>
         
-        <signjar alias="EaglEyeFT" keystore="${basedir}/EaglEye.keys">
-            <fileset dir="${dist.dir}">
-                <include name="Freetar.jar" />
-            </fileset>
+        <signjar alias="AntonStruyk" storepass="astruyk" keystore="${basedir}/AntonStruyk.keys">
+            <fileset file="${dist.jar}" />
             <fileset dir="${dist.dir}/lib">
                 <include name="**/*.jar" />
             </fileset>
@@ -50,6 +59,12 @@
         
         <delete file="${dist.dir}/README.TXT" />
         
+        <copy todir="${dist.dir}">
+            <fileset dir="${basedir}/resources">
+                <include name="**/*.jnlp" />
+            </fileset>
+        </copy>
+        
         <copy file="${basedir}/resources/freetar_webstart_logo.jpg" todir="${dist.dir}" />
     </target>
     
@@ -59,13 +74,13 @@
             <patternset>
                 <include name="**/*.*" />
             </patternset>
-            <fileset dir="${basedir}/native/windows">
+            <fileset dir="${basedir}/nativelib/windows">
                 <include name="**/*.jar" />
             </fileset>
         </unjar>
         
         <delete file="${dist.dir}/README.TXT" />
-        <copy file="${basedir}/resources/changelog.txt" todir="${dist.dir}" />
+        <!-- <copy file="${basedir}/resources/changelog.txt" todir="${dist.dir}" /> -->
     </target>
     
 </project>
