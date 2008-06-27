@@ -1,0 +1,68 @@
+#summary One-sentence summary of this page.
+
+= Note=
+
+This tutorial assumes you have downloaded the Freetar directory structure to <DOWNLOAD DIR> on your computer. 
+
+= Download From Google Code =
+
+Visit Freetar Hero on Google Code and download the latest version of the code using your favorite Subversion client and save it into a folder of your choice. 
+
+= Download and install Netbeans 5.5 IDE =
+
+Download and install the Netbeans IDE from Netbeans.org.
+
+= Setting Up A New Project & Adding The Sourcecode =
+
+First we have to create a new project to hold the code and runtime configuration for Freetar.
+  * Start Up Netbeans, and wait for it to load. 
+  * Choose 'New Project' from the 'File' menu 
+  * On the next screen, choose 'Java Project With Existing Sources' from the 'General' category 
+  * Next, you will be asked to choose the name of the project as well as the folder to store the project files. You can choose any folder on your computer for this part (i.e. the folder does not have to be the same place that you downloaded the Freetar Code to). 
+  * The next step asks you to specify the source packages for Freetar. You should have a ./src folder in your <DOWNLOAD DIR> folder where you placed the SVN of the freetar code - Add this folder to the 'Source Package Folders' section. 
+  * Now all the Freetar source packages should appear in the 'Source Packages' browser in netbeans along with the Java source files for each class. 
+
+= Setting Up Required Libraries =
+
+Next we have to tell Netbeans where all the necessary .jar files are. These files are external libraries that are required to build and run Freetar. They should have been downloaded to your <DOWNLOAD DIR>/libraries folder by Subversion. There are essentially 34 libraries required:
+
+jInput 
+    Required for Gamepad input 
+NativeFmodEx 
+    Required for music playback (Java bindings for FMOD) 
+jME 
+    Required for the Game-Engine 
+Swing Layout Extensions 
+    Required for the Swing panels and forms 
+
+  * With the freetar project selected as your main project, goto the 'File' menu and choose '"Freetar" Properties'. 
+  * Click on the 'Libraries' section, and add the following jar files to the 'Compile Time' libraries section:
+          o <DOWNLOAD DIR>/libraries/jInput_2006.05.14/jInput.jar
+          o <DOWNLOAD DIR>/libraries/NativeFmodEx_1.3.1/NativeFmodEx.jar
+          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme.jar
+          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-awt.jar
+          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-editors.jar
+          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-effects.jar
+          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-font.jar
+          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-gamestates.jar
+          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-model.jar
+          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-scene.jar
+          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-sound.jar
+          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-terrain.jar
+          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/lib/lwjgl.jar
+          o <DOWNLOAD DIR>/resources/DefaultSkin.jar
+          o <DOWNLOAD DIR>/resources/EditorIcons.jar
+          o <DOWNLOAD DIR>/resources/GameResources.jar 
+
+  * Finally click on the 'Add Library' button and choose the 'Swing Layout Extensions' library (should be installed with Netbeans by default) to add the Swing Layout libraries. 
+
+= Setting Up Runtime Configuration =
+
+  * Finally choose the 'Run' category and set the following:
+          o Main Class - 'net.freetar.game.Launcher'
+          o Working Directory - ' <DOWNLOAD DIR> '
+          o VM Options - '-Djava.library.path=./lib' 
+= Compiling & Running Freetar =
+
+  * Now Freetar should be all set up! You can use the 'Clean' button from the main menu to clean and build the project. 
+  * Click the 'Run' button to run the program! Thats it! 
