@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#Instructions for compiling/running code in Netbeans
 
 = Note=
 
@@ -6,7 +6,7 @@ This tutorial assumes you have downloaded the Freetar directory structure to <DO
 
 = Download From Google Code =
 
-Visit Freetar Hero on Google Code and download the latest version of the code using your favorite Subversion client and save it into a folder of your choice. 
+Visit Freetar Hero on Google Code and download the latest version of the code using your favorite Subversion client and save it into a folder of your choice. (Referred to as <DOWNLOAD DIR> for the rest of these instructions) 
 
 = Download and install Netbeans 5.5 IDE =
 
@@ -37,31 +37,32 @@ Swing Layout Extensions
 
   * With the freetar project selected as your main project, goto the 'File' menu and choose '"Freetar" Properties'. 
   * Click on the 'Libraries' section, and add the following jar files to the 'Compile Time' libraries section:
-          o <DOWNLOAD DIR>/libraries/jInput_2006.05.14/jInput.jar
-          o <DOWNLOAD DIR>/libraries/NativeFmodEx_1.3.1/NativeFmodEx.jar
-          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme.jar
-          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-awt.jar
-          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-editors.jar
-          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-effects.jar
-          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-font.jar
-          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-gamestates.jar
-          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-model.jar
-          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-scene.jar
-          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-sound.jar
-          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-terrain.jar
-          o <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/lib/lwjgl.jar
-          o <DOWNLOAD DIR>/resources/DefaultSkin.jar
-          o <DOWNLOAD DIR>/resources/EditorIcons.jar
-          o <DOWNLOAD DIR>/resources/GameResources.jar 
+    * <DOWNLOAD DIR>/libraries/jInput_2006.05.14/jInput.jar
+    * <DOWNLOAD DIR>/libraries/NativeFmodEx_1.3.1/NativeFmodEx.jar
+    * <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme.jar
+    * <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-awt.jar
+    * <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-editors.jar
+    * <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-effects.jar
+    * <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-font.jar
+    * <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-gamestates.jar
+    * <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-model.jar
+    * <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-scene.jar
+    * <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-sound.jar
+    * <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/jme-terrain.jar
+    * <DOWNLOAD DIR>/libraries/jME_CVS_Aug_29/lib/lwjgl.jar
+    * <DOWNLOAD DIR>/resources/DefaultSkin.jar
+    * <DOWNLOAD DIR>/resources/EditorIcons.jar
+    * <DOWNLOAD DIR>/resources/GameResources.jar 
 
   * Finally click on the 'Add Library' button and choose the 'Swing Layout Extensions' library (should be installed with Netbeans by default) to add the Swing Layout libraries. 
 
 = Setting Up Runtime Configuration =
 
   * Finally choose the 'Run' category and set the following:
-          o Main Class - 'net.freetar.game.Launcher'
-          o Working Directory - ' <DOWNLOAD DIR> '
-          o VM Options - '-Djava.library.path=./lib' 
+    * Main Class - 'net.freetar.game.Launcher'
+    * Working Directory - ' <DOWNLOAD DIR> '
+    * VM Options - '-Djava.library.path=./lib' 
+
 = Compiling & Running Freetar =
 
   * Now Freetar should be all set up! You can use the 'Clean' button from the main menu to clean and build the project. 
