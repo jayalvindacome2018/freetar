@@ -1,4 +1,4 @@
-#A short tutorial for newbies
+#summary A short tutorial for newbies
 
 = Beginning Editing Tutorial =
 
