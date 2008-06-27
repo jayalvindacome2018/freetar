@@ -1,5 +1,26 @@
 #summary Tips and Tricks
 
+= Downloaded song does not synch with your music file =
+
+Typically, digitzing and encoding songs into a compressed format (MP3, OGG) causes the songs to change their 'length'. Short pauses at the begining and ends of songs are often removed automatically by digitizing software or by users in order to remove the slight pause between tracks when listenting to their music. Unfortunately, this causes versions of the same music file to differ between many users. Since the Freetar song format stores the 'trigger times' for each note, the music you are using may have a noticable delay between when you see the note and when you actually hear it if you are not using an exact copy of the music file. This is an inherint limitation of storing the songs and note-timing information in seperate files.
+
+Fortunately, there is a quick and easy solution to the problem.
+
+  # Open the song in the Freetar editor along with the matching (but unsynchronized) music file
+  # Select the Edit -> Select All command from the menu (CTRL-A keyboard shortcut)
+  # Use the left and right arrow keys (or the appropriate Edit commands) to shift the notes ahead or behind until they match up with the music. Try to get them as close as possible, or you may find it difficult to play the song correctly.
+  # Once the notes match up with the song, save the .SNG file to keep your changes 
+
+That's it! Now your .SNG and music file should be synchronized!
+
+= The Downloaded song starts synchronized, but drifts off or differs as the song goes along =
+
+The problem is caused by using different recordings of the song - rather than simply differently encoded versions. If the song starts off synchronized, but differs later in the song, you may be using a different recording.
+
+Rather than simply having a different amount of 'pause' at the begining of the song, you have a completely different recording. For example, say the .SNG file may have been created with the studio recording from an artists album. If you synchronize it with your Live recording of the same song, there will be differences between the two versions. Since no two different recordings of a song are exactly the same - the small errors the performers make along the way add up to cause large differences. The differences will cause the notes to be 'wrong' - some parts may be missing, extra parts added, or the synchronization may simply 'drift' off as the song goes on.
+
+The only fix is to manually edit the .SNG file (as you would any normal song) to re-synchronize or add/remove the different sections of the song.
+
 = Opening A Downloaded Song In The Editor =
 
   # Legally aquire the Music file for the song you wish to edit
