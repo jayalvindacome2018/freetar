@@ -1,0 +1,15 @@
+#summary Tips and Tricks
+
+= Seek In The Editor =
+
+If you right-click and drag the mouse on one of the note-tracks in the main editor window, you will pan ahead or behind in the song. This is helpfull for lining up the 'current time' bar.
+
+= Matching up a downloaded song with your MP3(Ex. Live Shows) =
+
+    Most of you are undoubtedly already privy to this by now, but I wanted to barf it out there for all to see because it certainly helped me and I wanted to share the wealth :D If your 'home' MP3 isn't matching up with a .sng file and you think all hope is lost, never fear: Ctrl+A is here! And then just use the right or left arrow keys to position the entire song's content at a different spot superimposed over the actual MP3. Experimentation led me to believe that the best way to sync up a file (that is, if the .sng is accurate to the actual song) is to line up the last strummed pitch(es) of the .sng with the last strummed pitch(es) of the .mp3. If the tabber did a good job, the rest of it should fall in line perfectly. I am wholeheartedly enjoying Billy Talent's 'The Ex' because of this nifty serendipity. Knock yourselves out! 
+
+Also take a look at the Download Songs section for step-by-step instructions on synchronizing your music to a downloaded .SNG file.
+
+= Finding the Tempo of a song =
+
+    All right, the last one was a no-brainer, but THIS one could very well be news to at least one person's ears! This is a procedure for honing in on the exact tempo of any song to the point where you can fill in the value for the BPS and have an evenly-charted demarcation of the beat and its subdivisions at all times as it scrolls by! First, find the actual tempo in BPM of the song. A metronome with a 'tap' function like a Boss "Dr. Beat" works perfectly in this situation, but if you don't have one of those just download a metronome program from Cnet or use a metronome of your own to find as close to the actual tempo as you can get. When you have this value... Divide it by 60 to obtain the true BPS for the song. Then, finally... Multiply this BPS value by whatever subdivision of the "quarter-note" beat you would like to have represented visually for you on the scale at the bottom of the editor screen. Most of the time sixteenth notes (multiply by 4) work just fine, occasionally thirty-second notes (multiply by 8) if you're trying to nail down a rippin' solo. Or eighth notes (multiply by 2), if that's your preference and the song works mostly in block chords or is just plain simple. Hmmm...perhaps I should include a guarantee of some sort in this post that I won't continue barraging the forums with tips that I'm assuming most folks have discovered already :P In any case, I hope that this is able to help some of you expert tabbers out there with your wonderful work! Until Anton can work his magic and create a tempo utility of some sort, this is about the best that one can do aside from being really familiar with a song, strumming the entire thing on a keyboard/controller, and being secure in their rhythmic stability as a human being ;D Cheers! 
