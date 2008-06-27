@@ -1,3 +1,5 @@
+#summary A breif description of the code sections in Freetar
+
 = Getting Started =
 
 First off, if you want to get the most out of the Freetar code, you should use Netbeans to view/edit it. The Editor GUI was created in Maitisse, and editing components of the GUI in any other program may lead to incompatibilites in the code. I strongly reccomend following the instructions in the Setting Up Freetar In Netbeans article to get the most out of the Freetar source code.
