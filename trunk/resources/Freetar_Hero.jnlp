@@ -7,11 +7,10 @@
         <homepage href="http://www.antonstruyk.com"/>
         <description>Freetar Hero - A free PC rhythm based game. Beta version.</description>
         <icon href="freetar_webstart_logo.jpg"/>
-		<offline-allowed />
     </information>
     <resources>
         <j2se href="http://java.sun.com/products/autodl/j2se" version="1.5+"/>
-        <jar href="Freetar_Core.jar" main="true"/>
+        <jar href="Freetar.jar" main="true"/>
 	<jar href="lib/DefaultSkin.jar" />
 	<jar href="lib/GameResources.jar"/>
         <jar href="lib/jInput.jar" />    
@@ -24,7 +23,7 @@
         <jar href="lib/jme-terrain.jar" />
         <jar href="lib/lwjgl.jar" />
         <jar href="lib/NativeFmodEx.jar" />        
-        <jar href="lib/swing-layout-1.0.jar" />
+        <jar href="lib/swing-layout-1.0.3.jar" />
     </resources>
 	
     <resources os="Windows">

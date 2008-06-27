@@ -11,10 +11,10 @@
   </information>
   <resources>
     <j2se href="http://java.sun.com/products/autodl/j2se" version="1.5+"/>
-    <jar href="Freetar_Core.jar" main="true"/>
+    <jar href="Freetar.jar" main="true"/>
     <jar href="lib/EditorIcons.jar"/>
     <jar href="lib/jInput.jar" />
-    <jar href="lib/swing-layout-1.0.jar" />
+    <jar href="lib/swing-layout-1.0.3.jar" />
     <jar href="lib/NativeFmodEx.jar" />
   </resources>
   
