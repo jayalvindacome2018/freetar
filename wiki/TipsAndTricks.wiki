@@ -1,5 +1,19 @@
 #summary Tips and Tricks
 
+= Opening A Downloaded Song In The Editor =
+
+  # Legally aquire the Music file for the song you wish to edit
+  # Download the SNG file for the song you wish to edit
+  # If the .SNG file is in a compressed archive (.zip or .rar) unzip/rar it. You do not have to place the .SNG or Music file in any particular place on your computer.
+  # Start the Freetar Editor using either the downloaded .exe (windows), or webstart version (any OS)
+  # Choose 'File' -> 'Open' from the menu
+  # Browse to the location of the .SNG file
+  # Click on the 'Open Song' button to load the .SNG file 
+
+At this point, if you have the .SNG in the same folder as the Music file, the music will be loaded automatically. Also, if you have saved any changes to the .SNG file already (i.e. you have edited it in the past), the music file will open automatically. However, if neither of the above is true, you will be asked to locate the Music file on your computer.
+
+That's it! The downloaded song should now be open for editing (or playback) in the Freetar Editor.
+
 = Seek In The Editor =
 
 If you right-click and drag the mouse on one of the note-tracks in the main editor window, you will pan ahead or behind in the song. This is helpfull for lining up the 'current time' bar.
