@@ -1,4 +1,4 @@
-#Instructions for compiling/running code in Netbeans
+#summary Instructions for compiling/running code in Netbeans
 
 = Note=
 
